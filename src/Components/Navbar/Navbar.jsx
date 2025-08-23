@@ -45,20 +45,20 @@ const Navbar = () => {
             <div className="text-white py-5 flex justify-between items-center">
                 {/* Logo */}
                 <div className="text-lg font-semibold cursor-pointer whitespace-nowrap">
-                    <span className="text-[#8245ec]">&lt;</span>
-                    <span className="text-teal-500">SUMIT </span>
-                    <span className="text-teal-500">KUMAR </span>
-                    <span className="text-teal-500">DUTTA</span>
-                    <span className="text-[#8245ec]">&gt;</span>
+                    <span className="text-[#06A86C]">&lt;</span>
+                    <span className="text-white">SUMIT </span>
+                    <span className="text-white">KUMAR </span>
+                    <span className="text-white">DUTTA </span>
+                    <span className="text-[#06A86C]">   /&gt;</span>
                 </div>
 
                 {/* Desktop Menu */}
-                <ul className="hidden md:flex space-x-8 text-gray-300">
+                <ul className="hidden md:flex space-x-8 text-white">
                     {menuItems.map((item) => (
                         <li
                             key={item.id}
-                            className={`cursor-pointer hover:text-[#8245ec] ${
-                                activeSection === item.id ? "text-[#8245ec]" : ""
+                            className={`cursor-pointer hover:text-[#06A86C] ${
+                                activeSection === item.id ? "text-[#06A86C]" : ""
                             }`}
                         >
                             <button onClick={() => handleMenuItemClick(item.id)}>
@@ -74,7 +74,7 @@ const Navbar = () => {
                         href="https://github.com/sumitkd16"
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="text-gray-300 hover:text-[#8245ec]"
+                        className="text-white hover:text-[#06A86C]"
                     >
                         <FaGithub size={24} />
                     </a>
@@ -82,7 +82,7 @@ const Navbar = () => {
                         href="https://www.linkedin.com/in/sumitkd16"
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="text-gray-300 hover:text-[#8245ec]"
+                        className="text-white hover:text-[#06A86C]"
                     >
                         <FaLinkedin size={24} />
                     </a>
@@ -92,12 +92,12 @@ const Navbar = () => {
                 <div className="md:hidden">
                     {isOpen ? (
                         <FiX
-                            className="text-3xl text-[#8245ec] cursor-pointer"
+                            className="text-3xl text-[#06A86C] cursor-pointer"
                             onClick={() => setIsOpen(false)}
                         />
                     ) : (
                         <FiMenu
-                            className="text-3xl text-[#8245ec] cursor-pointer"
+                            className="text-3xl text-[#06A86C] cursor-pointer"
                             onClick={() => setIsOpen(true)}
                         />
                     )}
@@ -111,8 +111,8 @@ const Navbar = () => {
                         {menuItems.map((item) => (
                             <li
                                 key={item.id}
-                                className={`cursor-pointer hover:text-[#8245ec] ${
-                                    activeSection === item.id ? "text-[#8245ec]" : ""
+                                className={`cursor-pointer hover:text-[#06A86C] ${
+                                    activeSection === item.id ? "text-[#06A86C]" : ""
                                 }`}
                             >
                                 <button onClick={() => handleMenuItemClick(item.id)}>
@@ -126,7 +126,7 @@ const Navbar = () => {
                                 href="https://github.com/sumitkd16"
                                 target="_blank"
                                 rel="noopener noreferrer"
-                                className="text-gray-300 hover:text-[#8245ec]"
+                                className="text-white hover:text-[#06A86C]"
                             >
                                 <FaGithub size={28} />
                             </a>
@@ -134,7 +134,7 @@ const Navbar = () => {
                                 href="https://www.linkedin.com/in/sumitkd16"
                                 target="_blank"
                                 rel="noopener noreferrer"
-                                className="text-gray-300 hover:text-[#8245ec]"
+                                className="text-white hover:text-[#06A86C]"
                             >
                                 <FaLinkedin size={28} />
                             </a>

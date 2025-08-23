@@ -21,7 +21,7 @@ const Footer = () => {
         <footer className="text-white py-10 px-[8vw] md:px-[12vw] lg:px-[18vw] bg-gray-950">
             <div className="container mx-auto text-center">
                 {/* Name / Logo */}
-                <h2 className="text-2xl font-bold text-teal-400 tracking-wide">
+                <h2 className="text-2xl font-bold text-[#06A86C] tracking-wide">
                     SUMIT KUMAR DUTTA
                 </h2>
 
@@ -37,7 +37,7 @@ const Footer = () => {
                         <button
                             key={index}
                             onClick={() => handleScroll(item.id)}
-                            className="hover:text-purple-500 text-sm sm:text-base transition-colors"
+                            className="hover:text-[#06A86C] text-sm sm:text-base transition-colors"
                         >
                             {item.name}
                         </button>
@@ -61,7 +61,7 @@ const Footer = () => {
                             href={item.link}
                             target="_blank"
                             rel="noopener noreferrer"
-                            className="text-2xl hover:text-purple-500 transition-transform transform hover:scale-110"
+                            className="text-2xl hover:text-[#06A86C] transition-transform transform hover:scale-110"
                         >
                             {item.icon}
                         </a>

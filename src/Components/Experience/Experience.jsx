@@ -11,7 +11,7 @@ const Experience = () => {
             {/* Section Title */}
             <div className="text-center mb-16">
                 <h2 className="text-4xl font-bold text-white">EXPERIENCE</h2>
-                <div className="w-32 h-1 bg-purple-500 mx-auto mt-4"></div>
+                <div className="w-32 h-1 bg-[#06A86C] mx-auto mt-4"></div>
                 <p className="text-gray-400 mt-4 text-lg font-semibold">
                     A collection of my work experience and the roles I have taken in
                     various organizations
@@ -30,7 +30,7 @@ const Experience = () => {
                         className={`mb-16 flex flex-col sm:flex-row sm:justify-${index % 2 === 0 ? "start" : "end"} w-full relative`}
                     >
                         {/* Timeline Circle */}
-                        <div className="absolute sm:left-1/2 sm:transform sm:-translate-x-1/2 bg-gray-400 border-4 border-[#8245ec] w-12 h-12 sm:w-16 sm:h-16 rounded-full flex justify-center items-center z-10 mx-auto sm:mx-0">
+                        <div className="absolute sm:left-1/2 sm:transform sm:-translate-x-1/2 bg-gray-400 border-4 border-[#06A86C] w-12 h-12 sm:w-16 sm:h-16 rounded-full flex justify-center items-center z-10 mx-auto sm:mx-0">
                             <img
                                 src={experience.img}
                                 alt={experience.company}
@@ -40,7 +40,7 @@ const Experience = () => {
 
                         {/* Timeline Card */}
                         <div
-                            className={`w-full sm:w-[45%] mt-14 sm:mt-0 p-6 rounded-2xl shadow-2xl border border-white bg-gray-900 backdrop-blur-md shadow-[0_0_20px_1px_rgba(130,69,236,0.3)] transform transition-transform duration-300 hover:scale-105 ${
+                            className={`w-full sm:w-[45%] mt-14 sm:mt-0 p-6 rounded-2xl shadow-2xl border border-white bg-gray-900 backdrop-blur-md shadow-[0_0_20px_1px_rgba(6,168,108,0.3)] transform transition-transform duration-300 hover:scale-105 ${
                                 index % 2 === 0 ? "sm:mr-auto text-left" : "sm:ml-auto text-left"
                             }`}
                         >
@@ -74,7 +74,7 @@ const Experience = () => {
                                     {experience.skills.map((skill, idx) => (
                                         <li
                                             key={idx}
-                                            className="bg-[#8245ec] text-gray-300 px-4 py-1 text-xs sm:text-sm rounded-lg mr-2 mb-2 border border-gray-400"
+                                            className="bg-[#06A86C] text-gray-900 font-medium px-4 py-1 text-xs sm:text-sm rounded-lg mr-2 mb-2 border border-gray-300"
                                         >
                                             {skill}
                                         </li>

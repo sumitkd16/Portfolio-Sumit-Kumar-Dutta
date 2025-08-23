@@ -11,7 +11,7 @@ const Education = () => {
             {/* Section Title */}
             <div className="text-center mb-16">
                 <h2 className="text-3xl sm:text-4xl font-bold text-white">EDUCATION</h2>
-                <div className="w-24 sm:w-32 h-1 bg-purple-500 mx-auto mt-3"></div>
+                <div className="w-24 sm:w-32 h-1 bg-[#06A86C] mx-auto mt-3"></div>
                 <p className="text-gray-400 mt-4 text-base sm:text-lg font-medium">
                     My education has been a journey of learning and development. Here are the details of my academic background.
                 </p>
@@ -31,7 +31,7 @@ const Education = () => {
                         } w-full relative`}
                     >
                         {/* Timeline Circle */}
-                        <div className="hidden md:flex absolute left-1/2 transform -translate-x-1/2 bg-gray-400 border-4 border-[#8245ec] w-12 h-12 sm:w-16 sm:h-16 rounded-full justify-center items-center z-20">
+                        <div className="hidden md:flex absolute left-1/2 transform -translate-x-1/2 text-white border-4 border-[#06A86C] w-12 h-12 sm:w-16 sm:h-16 rounded-full justify-center items-center z-20">
                             <img
                                 src={edu.img}
                                 alt={edu.school}
@@ -41,7 +41,7 @@ const Education = () => {
 
                         {/* Education Card */}
                         <div
-                            className={`w-full md:w-[45%] max-w-lg p-6 rounded-2xl shadow-2xl border border-white bg-gray-900 backdrop-blur-md shadow-[0_0_20px_1px_rgba(130,69,236,0.3)] transform transition-transform duration-300 hover:scale-105 ${
+                            className={`w-full md:w-[45%] max-w-lg p-6 rounded-2xl shadow-2xl border border-white bg-gray-900 backdrop-blur-md shadow-[0_0_20px_1px_rgba(6,168,108,0.3)] transform transition-transform duration-300 hover:scale-105 ${
                                 index % 2 === 0 ? "md:mr-auto text-left" : "md:ml-auto text-left"
                             }`}
                         >

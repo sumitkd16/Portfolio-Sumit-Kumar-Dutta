@@ -10,7 +10,7 @@ const Skills = () => (
         {/* Section Title */}
         <div className="text-center mb-12">
             <h2 className="text-3xl sm:text-4xl font-bold text-white">SKILLS</h2>
-            <div className="w-24 h-1 bg-[#8245ec] mx-auto mt-3"></div>
+            <div className="w-24 h-1 bg-[#06A86C] mx-auto mt-3"></div>
             <p className="text-gray-400 mt-4 text-base sm:text-lg max-w-2xl mx-auto">
                 A collection of my technical skills and expertise honed through various
                 projects and experiences.
@@ -33,7 +33,7 @@ const Skills = () => (
                         {category.skills.map((skill) => (
                             <div
                                 key={skill.name}
-                                className="flex items-center gap-3 border border-gray-700 rounded-xl py-2 px-3 hover:bg-gray-800 hover:scale-105 transition-all duration-300"
+                                className="flex items-center gap-3 border border-gray-700 rounded-xl py-2 px-3 hover:bg-gray-800 hover:border-[#06A86C] hover:shadow-[0_0_10px_2px_rgba(6,168,108,0.3)] hover:scale-105 transition-all duration-300"
                             >
                                 <img
                                     src={skill.logo}
@@ -41,8 +41,8 @@ const Skills = () => (
                                     className="w-7 h-7 sm:w-8 sm:h-8 flex-shrink-0"
                                 />
                                 <span className="text-sm sm:text-base text-gray-300 break-words">
-                  {skill.name}
-                </span>
+                                    {skill.name}
+                                </span>
                             </div>
                         ))}
                     </div>

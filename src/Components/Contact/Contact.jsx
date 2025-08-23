@@ -49,8 +49,8 @@ const Contact = () => {
             {/* Section Title */}
             <div className="text-center mb-12">
                 <h2 className="text-3xl sm:text-4xl font-bold text-white">CONTACT</h2>
-                <div className="w-24 sm:w-32 h-1 bg-purple-500 mx-auto mt-3"></div>
-                <p className="text-gray-400 mt-4 text-base sm:text-lg font-medium">
+                <div className="w-24 sm:w-32 h-1 bg-[#06A86C] mx-auto mt-3"></div>
+                <p className="text-white mt-4 text-base sm:text-lg font-medium">
                     I’d love to hear from you — reach out for any opportunities or questions!
                 </p>
             </div>
@@ -68,7 +68,7 @@ const Contact = () => {
                         aria-label="Your Email"
                         placeholder="Your Email"
                         required
-                        className="w-full p-3 rounded-md bg-[#131025] text-white border border-gray-600 focus:outline-none focus:border-purple-500"
+                        className="w-full p-3 rounded-md bg-[#131025] text-white border border-gray-600 focus:outline-none focus:border-[#06A86C]"
                     />
                     <input
                         type="text"
@@ -76,7 +76,7 @@ const Contact = () => {
                         aria-label="Your Name"
                         placeholder="Your Name"
                         required
-                        className="w-full p-3 rounded-md bg-[#131025] text-white border border-gray-600 focus:outline-none focus:border-purple-500"
+                        className="w-full p-3 rounded-md bg-[#131025] text-white border border-gray-600 focus:outline-none focus:border-[#06A86C]"
                     />
                     <input
                         type="text"
@@ -84,7 +84,7 @@ const Contact = () => {
                         aria-label="Subject"
                         placeholder="Subject"
                         required
-                        className="w-full p-3 rounded-md bg-[#131025] text-white border border-gray-600 focus:outline-none focus:border-purple-500"
+                        className="w-full p-3 rounded-md bg-[#131025] text-white border border-gray-600 focus:outline-none focus:border-[#06A86C]"
                     />
                     <textarea
                         name="message"
@@ -92,13 +92,13 @@ const Contact = () => {
                         placeholder="Message"
                         rows="4"
                         required
-                        className="w-full p-3 rounded-md bg-[#131025] text-white border border-gray-600 focus:outline-none focus:border-purple-500"
+                        className="w-full p-3 rounded-md bg-[#131025] text-white border border-gray-600 focus:outline-none focus:border-[#06A86C]"
                     />
 
                     {/* Send Button */}
                     <button
                         type="submit"
-                        className="w-full bg-gradient-to-r from-purple-600 to-teal-500 py-3 text-white font-semibold rounded-md shadow-lg hover:opacity-90 hover:scale-[1.02] transition duration-300"
+                        className="w-full bg-gradient-to-r from-[#06A86C] to-[#0FD186] py-3 text-white font-semibold rounded-md shadow-lg hover:opacity-90 hover:scale-[1.02] transition duration-300"
                     >
                         Send
                     </button>
@@ -106,7 +106,7 @@ const Contact = () => {
 
                 {/* Extra success message (optional) */}
                 {isSent && (
-                    <p className="text-green-400 text-sm text-center mt-4">
+                    <p className="text-[#06A86C] text-sm text-center mt-4">
                         ✅ Thanks! Your message has been sent.
                     </p>
                 )}

@@ -17,7 +17,7 @@ const About = () => {
                     <h2 className="text-4xl sm:text-5xl md:text-6xl font-bold text-white mb-4 leading-tight">
                         Sumit Kumar Dutta
                     </h2>
-                    <h3 className="text-xl sm:text-2xl md:text-3xl font-semibold mb-4 text-[#8245ec] leading-tight">
+                    <h3 className="text-xl sm:text-2xl md:text-3xl font-semibold mb-4 text-[#06A86C] leading-tight">
                         <span className="text-white">I am a </span>
                         <Typewriter
                             words={[
@@ -32,10 +32,10 @@ const About = () => {
                             delaySpeed={500}
                             cursor
                             cursorStyle="|"
-                            cursorColor="#8245ec"
+                            cursorColor="#06A86C"
                         />
                     </h3>
-                    <p className="text-base sm:text-lg text-gray-400 mb-10 mt-6 leading-relaxed">
+                    <p className="text-base sm:text-lg text-white mb-10 mt-6 leading-relaxed">
                         I am a Java full-stack developer with 6 months of experience in
                         building scalable web applications. Skilled in both front-end and
                         back-end development, I specialize in modern technologies to
@@ -47,9 +47,9 @@ const About = () => {
                         rel="noopener noreferrer"
                         className="inline-block text-white py-3 px-8 rounded-full mt-5 text-lg font-bold transition duration-300 transform hover:scale-105"
                         style={{
-                            background: 'linear-gradient(90deg, #8245ec, #a855f7)',
+                            background: 'linear-gradient(90deg, #06A86C, #0FD186)',
                             boxShadow:
-                                '0 0 4px #8245ec, 0 0 8px #8245ec, 0 0 20px #8245ec',
+                                '0 0 4px #06A86C, 0 0 8px #06A86C, 0 0 20px #06A86C',
                         }}
                     >
                         DOWNLOAD CV
@@ -65,8 +65,8 @@ const About = () => {
                         src={profileImage}
                         alt="Sumit Kumar Dutta"
                         className="w-48 h-48 sm:w-64 sm:h-64 md:w-80 md:h-80 lg:w-[28rem] lg:h-[28rem]
-                                   border-4 border-teal-500 rounded-full object-cover
-                                   drop-shadow-[0_10px_20px_rgba(130,69,236,0.5)]
+                                   border-4 border-[#06A86C] rounded-full object-cover
+                                   drop-shadow-[0_10px_20px_rgba(6,168,108,0.5)]
                                    transition-transform duration-500 ease-in-out"
                         style={{
                             transform: 'translateZ(0px) scale(1)',
