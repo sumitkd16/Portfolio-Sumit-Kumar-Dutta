@@ -1,14 +1,14 @@
 import { useState } from 'react'
 import './App.css'
-import Navbar from "./components/Navbar/Navbar.jsx";
-import About from "./components/About/About.jsx";
-import Skills from "./components/Skills/Skills.jsx";
-import Experience from "./components/Experience/Experience.jsx";
-import Work from "./components/Work/Work.jsx";
-import Education from "./components/Education/Education.jsx";
-import Contact from "./components/Contact/Contact.jsx";
-import Footer from "./components/Footer/Footer.jsx";
-import BlurBlob from './components/BlurBlob.jsx';
+import Navbar from "./Components/Navbar/Navbar.jsx";
+import About from "./Components/About/About.jsx";
+import Skills from "./Components/Skills/Skills.jsx";
+import Experience from "./Components/Experience/Experience.jsx";
+import Work from "./Components/Work/Work.jsx";
+import Education from "./Components/Education/Education.jsx";
+import Contact from "./Components/Contact/Contact.jsx";
+import Footer from "./Components/Footer/Footer.jsx";
+import BlurBlob from './Components/BlurBlob.jsx';
 
 function App() {
 
