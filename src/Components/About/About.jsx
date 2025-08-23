@@ -14,9 +14,14 @@ const About = () => {
                     <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-white mb-2 leading-tight">
                         Hi, I am
                     </h1>
-                    <h2 className="text-4xl sm:text-5xl md:text-6xl font-bold text-white mb-4 leading-tight">
+                    {/* Name - stay on one line */}
+                    <h2
+                        className="font-bold text-white mb-4 leading-tight whitespace-nowrap tracking-tight"
+                        style={{ fontSize: 'clamp(1.5rem, 7vw, 4rem)' }}
+                    >
                         Sumit Kumar Dutta
                     </h2>
+
                     <h3 className="text-xl sm:text-2xl md:text-3xl font-semibold mb-4 text-[#8245ec] leading-tight">
                         <span className="text-white">I am a </span>
                         <Typewriter
@@ -35,12 +40,14 @@ const About = () => {
                             cursorColor="#8245ec"
                         />
                     </h3>
+
                     <p className="text-base sm:text-lg text-gray-400 mb-10 mt-6 leading-relaxed">
                         I am a Java full-stack developer with 6 months of experience in
                         building scalable web applications. Skilled in both front-end and
                         back-end development, I specialize in modern technologies to
                         create seamless user experiences and efficient solutions.
                     </p>
+
                     <a
                         href="https://drive.google.com/file/d/1JuFo7XuAlH2ZC3R4HdHDol9ztDoV-anB/view?usp=sharing"
                         target="_blank"
@@ -67,17 +74,13 @@ const About = () => {
                         className="w-48 h-48 sm:w-64 sm:h-64 md:w-80 md:h-80 lg:w-[28rem] lg:h-[28rem]
                                    border-4 border-teal-500 rounded-full object-cover
                                    drop-shadow-[0_10px_20px_rgba(130,69,236,0.5)]
-                                   transition-transform duration-500 ease-in-out"
-                        style={{
-                            transform: 'translateZ(0px) scale(1)',
-                        }}
+                                   transition-transform duration-500 ease-in-out will-change-transform"
+                        style={{ transform: 'translateZ(0px) scale(1)' }}
                         onMouseEnter={(e) =>
-                            (e.currentTarget.style.transform =
-                                'translateZ(60px) scale(1.05)')
+                            (e.currentTarget.style.transform = 'translateZ(60px) scale(1.05)')
                         }
                         onMouseLeave={(e) =>
-                            (e.currentTarget.style.transform =
-                                'translateZ(0px) scale(1)')
+                            (e.currentTarget.style.transform = 'translateZ(0px) scale(1)')
                         }
                     />
                 </div>
