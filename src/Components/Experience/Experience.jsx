@@ -6,7 +6,7 @@ const Experience = () => {
     return (
         <section
             id="experience"
-            className="py-24 px-[12vw] md:px-[7vw] lg:px-[16vw] font-sans bg-skills-gradient clip-path-custom-2"
+            className="py-24 px-[8vw] md:px-[7vw] lg:px-[16vw] font-sans bg-skills-gradient clip-path-custom-2"
         >
             {/* Section Title */}
             <div className="text-center mb-16">
@@ -20,17 +20,17 @@ const Experience = () => {
 
             {/* Timeline Container */}
             <div className="relative">
-                {/* Vertical Line in Center */}
-                <div className="absolute left-1/2 top-0 transform -translate-x-1/2 w-1 bg-white h-full"></div>
+                {/* Vertical Line in Center (hidden on mobile) */}
+                <div className="hidden sm:block absolute left-1/2 top-0 transform -translate-x-1/2 w-1 bg-white h-full"></div>
 
                 {/* Timeline Entries */}
                 {experiences.map((experience, index) => (
                     <div
                         key={experience.id}
-                        className={`mb-16 flex justify-${index % 2 === 0 ? "start" : "end"} w-full relative`}
+                        className={`mb-16 flex flex-col sm:flex-row sm:justify-${index % 2 === 0 ? "start" : "end"} w-full relative`}
                     >
                         {/* Timeline Circle */}
-                        <div className="absolute left-1/2 transform -translate-x-1/2 bg-gray-400 border-4 border-[#8245ec] w-12 h-12 sm:w-16 sm:h-16 rounded-full flex justify-center items-center z-10">
+                        <div className="absolute sm:left-1/2 sm:transform sm:-translate-x-1/2 bg-gray-400 border-4 border-[#8245ec] w-12 h-12 sm:w-16 sm:h-16 rounded-full flex justify-center items-center z-10 mx-auto sm:mx-0">
                             <img
                                 src={experience.img}
                                 alt={experience.company}
@@ -40,8 +40,8 @@ const Experience = () => {
 
                         {/* Timeline Card */}
                         <div
-                            className={`w-full sm:w-[45%] p-6 rounded-2xl shadow-2xl border border-white bg-gray-900 backdrop-blur-md shadow-[0_0_20px_1px_rgba(130,69,236,0.3)] transform transition-transform duration-300 hover:scale-105 ${
-                                index % 2 === 0 ? "mr-auto text-left" : "ml-auto text-left"
+                            className={`w-full sm:w-[45%] mt-14 sm:mt-0 p-6 rounded-2xl shadow-2xl border border-white bg-gray-900 backdrop-blur-md shadow-[0_0_20px_1px_rgba(130,69,236,0.3)] transform transition-transform duration-300 hover:scale-105 ${
+                                index % 2 === 0 ? "sm:mr-auto text-left" : "sm:ml-auto text-left"
                             }`}
                         >
                             {/* Company Info */}

@@ -38,17 +38,17 @@ const Navbar = () => {
 
     return (
         <nav
-            className={`fixed top-0 w-full z-50 transition duration-300 px-[7vw] md:px-[7vw] lg:px-[20vw] ${
-                isScrolled ? "bg-[#050414] bg-opacity-50 backdrop-blur-md shadow-md" : "bg-transparent"
-            }`}
+            className={`fixed top-0 w-full z-50 transition duration-300 
+            px-4 sm:px-8 md:px-[7vw] lg:px-[15vw] 
+            ${isScrolled ? "bg-[#050414]/70 backdrop-blur-md shadow-md" : "bg-transparent"}`}
         >
             <div className="text-white py-5 flex justify-between items-center">
                 {/* Logo */}
-                <div className="text-lg font-semibold cursor-pointer">
+                <div className="text-lg font-semibold cursor-pointer whitespace-nowrap">
                     <span className="text-[#8245ec]">&lt;</span>
-                    <span className="text-teal-500 ">  SUMIT </span>
+                    <span className="text-teal-500">SUMIT </span>
                     <span className="text-teal-500">KUMAR </span>
-                    <span className="text-teal-500">DUTTA </span>
+                    <span className="text-teal-500">DUTTA</span>
                     <span className="text-[#8245ec]">&gt;</span>
                 </div>
 
@@ -68,7 +68,7 @@ const Navbar = () => {
                     ))}
                 </ul>
 
-                {/* Social Icons */}
+                {/* Social Icons (Desktop) */}
                 <div className="hidden md:flex space-x-4">
                     <a
                         href="https://github.com/sumitkd16"
@@ -106,12 +106,12 @@ const Navbar = () => {
 
             {/* Mobile Menu Items */}
             {isOpen && (
-                <div className="absolute top-16 left-1/2 transform -translate-x-1/2 w-4/5 bg-[#050414] bg-opacity-50 backdrop-filter backdrop-blur-lg z-50 rounded-lg shadow-lg md:hidden">
-                    <ul className="flex flex-col items-center space-y-4 py-4 text-gray-300">
+                <div className="fixed top-0 left-0 w-full h-screen bg-[#050414]/90 backdrop-blur-lg z-40 flex flex-col items-center justify-center md:hidden">
+                    <ul className="flex flex-col items-center space-y-6 text-lg text-gray-300">
                         {menuItems.map((item) => (
                             <li
                                 key={item.id}
-                                className={`cursor-pointer hover:text-white ${
+                                className={`cursor-pointer hover:text-[#8245ec] ${
                                     activeSection === item.id ? "text-[#8245ec]" : ""
                                 }`}
                             >
@@ -120,22 +120,23 @@ const Navbar = () => {
                                 </button>
                             </li>
                         ))}
-                        <div className="flex space-x-4">
+                        {/* Socials in Mobile Menu */}
+                        <div className="flex space-x-6 pt-6">
                             <a
                                 href="https://github.com/sumitkd16"
                                 target="_blank"
                                 rel="noopener noreferrer"
-                                className="text-gray-300 hover:text-white"
+                                className="text-gray-300 hover:text-[#8245ec]"
                             >
-                                <FaGithub size={24} />
+                                <FaGithub size={28} />
                             </a>
                             <a
                                 href="https://www.linkedin.com/in/sumitkd16"
                                 target="_blank"
                                 rel="noopener noreferrer"
-                                className="text-gray-300 hover:text-white"
+                                className="text-gray-300 hover:text-[#8245ec]"
                             >
-                                <FaLinkedin size={24} />
+                                <FaLinkedin size={28} />
                             </a>
                         </div>
                     </ul>
