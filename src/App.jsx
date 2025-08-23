@@ -1,5 +1,5 @@
-import { useState } from 'react'
-import './App.css'
+import React, { useEffect } from 'react';
+import './App.css';
 import Navbar from "./Components/Navbar/Navbar.jsx";
 import About from "./Components/About/About.jsx";
 import Skills from "./Components/Skills/Skills.jsx";
@@ -11,27 +11,27 @@ import Footer from "./Components/Footer/Footer.jsx";
 import BlurBlob from './Components/BlurBlob.jsx';
 
 function App() {
+    // ⬇️ scroll to top on initial load
+    useEffect(() => {
+        window.history.scrollRestoration = "manual"; // disable browser restore
+        window.scrollTo(0, 0); // always start at top
+    }, []);
 
-  return (
-      <div className="bg-[#050414]">
-
-        <BlurBlob position={{ top: '35%', left: '20%' }} size={{ width: '30%', height: '40%' }} />
-
-        <div className="absolute inset-0 bg-[linear-gradient(to_right,#4f4f4f2e_1px,transparent_1px),linear-gradient(to_bottom,#4f4f4f2e_1px,transparent_1px)] bg-[size:14px_24px] [mask-image:radial-gradient(ellipse_60%_50%_at_50%_0%,#000_70%,transparent_100%)]"></div>
-
-        <div className="relative pt-20">
-          <Navbar />
-          <About />
-          <Skills />
-          <Experience />
-          <Work />
-          <Education />
-          <Contact />
-          <Footer />
+    return (
+        <div className="relative overflow-hidden">
+            <BlurBlob />
+            <div className="relative pt-20 z-10">
+                <Navbar />
+                <About />
+                <Skills />
+                <Experience />
+                <Work />
+                <Education />
+                <Contact />
+                <Footer />
+            </div>
         </div>
-
-      </div>
-  )
+    );
 }
 
-export default App
+export default App;

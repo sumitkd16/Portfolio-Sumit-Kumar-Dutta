@@ -1,5 +1,5 @@
 @import "tailwindcss";
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@0;100;200;300;400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
 
 * {
     font-family: "Poppins", sans-serif;
@@ -9,35 +9,70 @@ html {
     scroll-behavior: smooth;
 }
 
-@layer utilities {
-    .clip-path-custom {
-        clip-path: polygon(0 0, 100% 0, 100% 98%, 75% 95%, 0 100%);
+body {
+    background: #000;
+    margin: 0;
+}
+
+/* Stars */
+.star {
+    position: absolute;
+    background: white;
+    border-radius: 50%;
+    box-shadow: 0 0 2px rgba(255, 255, 255, 0.8);
+}
+
+@keyframes pulse-subtle {
+    0%, 100% { opacity: 0.6; transform: scale(1); }
+    50% { opacity: 1; transform: scale(1.1); }
+}
+
+.animate-pulse-subtle {
+    animation: pulse-subtle 2s infinite ease-in-out;
+}
+
+.meteor {
+    position: absolute;
+    background: linear-gradient(90deg, white, rgba(255, 255, 255, 0));
+    border-radius: 9999px;
+    transform: rotate(-45deg);
+    opacity: 0.8;
+    animation-name: meteor;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite; /* 🔑 keeps looping */
+}
+
+@keyframes meteor {
+    0% {
+        transform: translateX(0) translateY(0) rotate(-45deg);
+        opacity: 1;
     }
-    .clip-path-custom-2 {
-        clip-path: polygon(0 0, 100% 0, 100% 98%, 25% 95%, 0 100%);
-    }
-    .clip-path-custom-3 {
-        clip-path: polygon(0 0, 100% 0, 100% 98%, 75% 96%, 0 100%);
+    100% {
+        transform: translateX(-600px) translateY(600px) rotate(-45deg);
+        opacity: 0;
     }
 }
 
-@keyframes bounce {
-    0%, 20%, 50%, 80%, 100% {
-        transform: translateY(0);
-    }
-    40% {
-        transform: translateY(-10px);
-    }
-    60% {
-        transform: translateY(-5px);
+.star, .meteor {
+    will-change: transform, opacity;
+    backface-visibility: hidden;
+    transform: translateZ(0); /* forces GPU acceleration */
+}
+
+@media (max-width: 768px) {
+    html {
+        scroll-behavior: auto;
     }
 }
 
-.bounce:hover {
-    animation: bounce 0.5s ease-in-out;
-}
 
-/* Add this in your global CSS */
-.clip-path-hexagon {
-    clip-path: polygon(25% 5%, 75% 5%, 100% 50%, 75% 95%, 25% 95%, 0% 50%);
+@keyframes meteor {
+    0% {
+        transform: translateX(0) translateY(0) rotate(-45deg);
+        opacity: 1;
+    }
+    100% {
+        transform: translateX(-400px) translateY(400px) rotate(-45deg); /* was -600px,600px */
+        opacity: 0;
+    }
 }
