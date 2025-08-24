@@ -42,7 +42,7 @@ const About = () => {
                         create seamless user experiences and efficient solutions.
                     </p>
                     <a
-                        href="https://drive.google.com/file/d/1JuFo7XuAlH2ZC3R4HdHDol9ztDoV-anB/view?usp=sharing"
+                        href="https://drive.google.com/file/d/1AeXdQhvtjtTuTP9_kY7yyLTZwFFYbYXd/view?usp=sharing"
                         target="_blank"
                         rel="noopener noreferrer"
                         className="inline-block text-white py-3 px-8 rounded-full mt-5 text-lg font-bold transition duration-300 transform hover:scale-105"
