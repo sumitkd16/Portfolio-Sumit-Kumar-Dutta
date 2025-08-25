@@ -48,7 +48,7 @@ import qwikbit from './assets/work_logo/qwikbit.png';
 import movify from './assets/work_logo/movify.png';
 import eurek from './assets/work_logo/eureka-weather.png';
 import tictac from './assets/work_logo/tictac.png';
-import webverLogo from './assets/work_logo/web_dig.png';
+import recursive from './assets/work_logo/recursive.png';
 import cmLogo from './assets/work_logo/cm.png';
 import imagesearchLogo from './assets/work_logo/image_search.png';
 import removebgLogo from './assets/work_logo/remove_bg.png';
@@ -193,7 +193,7 @@ export const projects = [
             "invoices. Added six customizable templates, with support for PDF download and email delivery, deployed via\n" +
             "Netlify and Render.\n",
         image: billqube,
-        tags: ["HTML", "CSS", "JavaScript", "React JS", "API","SpringBoot","MongoDB","Clerk",],
+        tags: ["HTML","JavaScript", "React JS", "API","SpringBoot","MongoDB","Clerk", "Tailwind CSS" ],
         github: "https://github.com/sumitkd16/BillQube-Invoice-Generator",
         webapp: "https://billqube.netlify.app/",
     },
@@ -203,22 +203,32 @@ export const projects = [
         description:
             "Developed a secure URL shortening platform with React.js, Spring Boot, and PostgreSQL (Neon DB). Users can generate short links, customize them, and track real-time click analytics via a personal dashboard. Implemented JWT authentication for secure access, with deployment on Netlify and Render.",
         image: qwikbit,
-        tags: ["HTML", "CSS", "JavaScript", "React JS", "API","SpringBoot","MongoDB","NeonDB","PostgreSQL",],
+        tags: ["HTML","JavaScript", "React JS", "API","SpringBoot","MongoDB","NeonDB","PostgreSQL", "Tailwind CSS" ],
         github: "https://github.com/sumitkd16/QwikBit-Link-Shortener",
         webapp: "https://qwikbit.netlify.app/",
     },
     {
         id: 2,
+        title: "Recursive Mind - Personal Blogging Application ",
+        description:
+            "Developed a secure URL shortening platform with React.js, Spring Boot, and PostgreSQL (Neon DB). Users can generate short links, customize them, and track real-time click analytics via a personal dashboard. Implemented JWT authentication for secure access, with deployment on Netlify and Render.",
+        image: recursive,
+        tags: ["HTML","JavaScript", "React JS", "API", "FireBase" , "Tailwind CSS"],
+        github: "https://github.com/sumitkd16/Recursive-Mind--Personal-Blogging",
+        webapp: "https://recursivemind.netlify.app/",
+    },
+    {
+        id: 3,
         title: "Movify - Movie Recommendation App",
         description:
             "A React-based web application that provides movie recommendations based on different criteria, such as genres, user preferences, and popular trends. The intuitive design and smooth experience make it a go-to app for movie enthusiasts.",
         image: movify,
-        tags: ["React JS", "API", "HTML", "CSS", "JavaScript" , "Appwrite"],
+        tags: ["React JS", "API", "HTML", "CSS", "JavaScript" , "Appwrite" , "Tailwind CSS" ],
         github: "https://github.com/sumitkd16/Movify---Movie-Recommendation-App",
         webapp: "https://skdmovify.netlify.app/",
     },
     {
-        id: 3,
+        id: 4,
         title: "Eureka — Weather App ",
         description:
             "Get the latest weather update ",
@@ -228,7 +238,7 @@ export const projects = [
         webapp: "https://eurekaweather.netlify.app/",
     },
     {
-        id: 4,
+        id: 5,
         title: "Tic Tac Toe - Game App ",
         description:
             "A very fun Gaming APP  ",
