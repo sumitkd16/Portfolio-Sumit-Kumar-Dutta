@@ -107,6 +107,13 @@ const Navbar = () => {
             {/* Mobile Menu Items */}
             {isOpen && (
                 <div className="fixed top-0 left-0 w-full h-screen bg-[#050414]/90 backdrop-blur-lg z-40 flex flex-col items-center justify-center md:hidden">
+
+                    {/* Add Close Button inside the menu */}
+                    <FiX
+                        className="text-3xl text-[#06A86C] cursor-pointer absolute top-6 right-6"
+                        onClick={() => setIsOpen(false)}
+                    />
+
                     <ul className="flex flex-col items-center space-y-6 text-lg text-gray-300">
                         {menuItems.map((item) => (
                             <li
