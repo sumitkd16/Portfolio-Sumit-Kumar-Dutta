@@ -211,7 +211,7 @@ export const projects = [
         id: 2,
         title: "Recursive Mind - Personal Blogging Application ",
         description:
-            "Developed a secure URL shortening platform with React.js, Spring Boot, and PostgreSQL (Neon DB). Users can generate short links, customize them, and track real-time click analytics via a personal dashboard. Implemented JWT authentication for secure access, with deployment on Netlify and Render.",
+            "I created a full-stack blogging app using React.js ⚛️, Tailwind CSS 🎨, and UI libraries for a modern, responsive design. The backend is powered by Firebase 🔥 for authentication, database, and real-time updates. It also includes EmailJS 📧 for contact forms. Deployed on Netlify 🚀 for fast and reliable hosting",
         image: recursive,
         tags: ["HTML","JavaScript", "React JS", "API", "FireBase" , "Tailwind CSS"],
         github: "https://github.com/sumitkd16/Recursive-Mind--Personal-Blogging",
