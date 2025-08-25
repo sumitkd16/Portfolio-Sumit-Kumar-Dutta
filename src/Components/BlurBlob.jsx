@@ -2,7 +2,6 @@ import React, { useEffect, useState, useCallback } from "react";
 
 const BlurBlob = () => {
     const [stars, setStars] = useState([]);
-    const [meteors, setMeteors] = useState([]);
     const [useFixed, setUseFixed] = useState(false);
 
     // Debounce function to prevent too many re-renders on resize
@@ -36,28 +35,6 @@ const BlurBlob = () => {
         setStars(newStars);
     }, []);
 
-    const generateMeteors = useCallback(() => {
-        const viewportArea = window.innerWidth * window.innerHeight;
-        // Good density for a constant stream of meteors
-        const density = 9058;
-        let numberOfMeteors = Math.floor(viewportArea / density);
-
-        const newMeteors = [];
-        for (let i = 0; i < numberOfMeteors; i++) {
-            const duration = Math.random() * 4 + 6;
-            newMeteors.push({
-                id: i,
-                size: Math.random() * 1.5 + 1, // Good visible size
-                x: Math.random() * 100,
-                y: Math.random() * 100,
-                // Start each meteor at a random point in its cycle
-                delay: -(Math.random() * duration),
-                animationDuration: duration,
-            });
-        }
-        setMeteors(newMeteors);
-    }, []);
-
     useEffect(() => {
         // Check if the browser is mobile and the viewport is wide (desktop mode)
         const isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
@@ -65,19 +42,17 @@ const BlurBlob = () => {
             setUseFixed(true);
         }
 
-        // Generate initial stars and meteors
+        // Generate initial stars
         generateStars();
-        generateMeteors();
 
         // Create a debounced version of the resize handler
         const debouncedResizeHandler = debounce(() => {
             generateStars();
-            generateMeteors();
         }, 250);
 
         window.addEventListener("resize", debouncedResizeHandler);
         return () => window.removeEventListener("resize", debouncedResizeHandler);
-    }, [generateStars, generateMeteors]);
+    }, [generateStars]);
 
     return (
         <div
@@ -87,29 +62,13 @@ const BlurBlob = () => {
             {stars.map((star) => (
                 <div
                     key={star.id}
-                    className="star" // Removed the animate-pulse-subtle class
+                    className="star"
                     style={{
                         width: `${star.size}px`,
                         height: `${star.size}px`,
                         left: `${star.x}%`,
                         top: `${star.y}%`,
-                        opacity: star.opacity, // Static opacity
-                    }}
-                />
-            ))}
-
-            {/* Render Meteors */}
-            {meteors.map((meteor) => (
-                <div
-                    key={meteor.id}
-                    className="meteor"
-                    style={{
-                        width: `${meteor.size * 70}px`, // Nice long trail
-                        height: `${meteor.size}px`,
-                        left: `${meteor.x}%`,
-                        top: `${meteor.y}%`,
-                        animationDelay: `${meteor.delay}s`,
-                        animationDuration: `${meteor.animationDuration}s`,
+                        opacity: star.opacity,
                     }}
                 />
             ))}
