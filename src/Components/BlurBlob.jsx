@@ -44,7 +44,7 @@ const BlurBlob = () => {
     };
 
     const generateMeteors = () => {
-        const density = 10000; // tweak: smaller = more meteors
+        const density = 13000; // tweak: smaller = more meteors
         const numberOfMeteors = Math.floor(
             (window.innerWidth * window.innerHeight) / density
         );
