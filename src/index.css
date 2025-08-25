@@ -15,13 +15,29 @@ body {
     overflow-x: hidden;
 }
 
-/* Stars - NOW STATIC & PERFORMANT */
+/* Stars */
 .star {
     position: absolute;
     background: white;
     border-radius: 50%;
     box-shadow: 0 0 2px rgba(255, 255, 255, 0.8);
-    /* Removed all animation properties */
+    will-change: transform, opacity;
+    backface-visibility: hidden;
+}
+
+@keyframes pulse-subtle {
+    0%, 100% {
+        opacity: 0.6;
+        transform: scale(1);
+    }
+    50% {
+        opacity: 1;
+        transform: scale(1.05); /* More subtle scaling for performance */
+    }
+}
+
+.animate-pulse-subtle {
+    animation: pulse-subtle 2s infinite ease-in-out;
 }
 
 /* Meteors */
@@ -47,6 +63,7 @@ body {
         opacity: 1;
     }
     100% {
+        /* Use vw/vh for a more consistent animation across screen sizes */
         transform: translateX(-100vw) translateY(100vh) rotate(-45deg);
         opacity: 0;
     }
