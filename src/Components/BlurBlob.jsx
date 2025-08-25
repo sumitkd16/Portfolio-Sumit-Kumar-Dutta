@@ -44,7 +44,7 @@ const BlurBlob = () => {
 
         const newMeteors = [];
         for (let i = 0; i < numberOfMeteors; i++) {
-            const duration = Math.random() * 2 + 2;
+            const duration = Math.random() * 4 + 6;
             newMeteors.push({
                 id: i,
                 size: Math.random() * 1.5 + 1, // Good visible size
