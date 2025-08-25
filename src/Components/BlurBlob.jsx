@@ -27,7 +27,7 @@ const BlurBlob = () => {
 
     const generateStars = () => {
         const numberOfStars = Math.floor(
-            (window.innerWidth * window.innerHeight) / 900 // bigger divisor = fewer stars
+            (window.innerWidth * window.innerHeight) / 1500 // bigger divisor = fewer stars
         );
         const newStars = [];
         for (let i = 0; i < numberOfStars; i++) {
@@ -44,7 +44,7 @@ const BlurBlob = () => {
     };
 
     const generateMeteors = () => {
-        const density = 6000; // tweak: smaller = more meteors
+        const density = 10000; // tweak: smaller = more meteors
         const numberOfMeteors = Math.floor(
             (window.innerWidth * window.innerHeight) / density
         );
